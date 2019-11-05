@@ -13,7 +13,7 @@ public class ReverseInt {
 //        } while (nbr != 0);
     }
 
-    public static int reverse2(int nbr) {
+    public static int reverse(int nbr) {
         int reverseNbr = 0;
         while (nbr != 0) {
             System.out.println(nbr);
@@ -23,9 +23,9 @@ public class ReverseInt {
         return reverseNbr;
     }
 
-    public static int reverse(int nbr) {
+    public static int reverse2(int nbr) {
         if (nbr < 10) return nbr;
-        System.out.println(((nbr % 10) * 10) + " " + (nbr % 10));
-        return (nbr % 10) * 10 + reverse(nbr / 10);
+        System.out.println(nbr % 10 * 10);
+        return  reverse(nbr / 10) + (nbr % 10) * 10;
     }
 }
